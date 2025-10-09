@@ -5,12 +5,7 @@ function mostrarResultado() {
 
   if (selecionados.length === 0) {
     resposta.innerText = "Você não selecionou nenhuma opção!";
-  } else {
-    let escolhas = [];
-    selecionados.forEach(el => escolhas.push(el.parentElement.innerText.trim()));
-    resposta.innerText = "Você gosta de: " + escolhas.join(", ") + ".";
-  }
-
+  } 
   resultado.style.display = "block";
 }
 
@@ -18,3 +13,4 @@ document.getElementById("quizForm").addEventListener("submit", function (e) {
   e.preventDefault();
   mostrarResultado();
 });
+
